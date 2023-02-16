@@ -11,13 +11,20 @@ Postdata.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    username: {
+    title: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    post_date: {
-      type: DataTypes.DATE,
+    content: {
+      type: DataTypes.STRING,
       allowNull: false,
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
     },
     comment_id: {
       type: DataTypes.INTEGER,

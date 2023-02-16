@@ -1,9 +1,12 @@
-// NEEDS TO BE UPDATED
+const router = require('express').Router();
+const apiRoutes = require('./api');
+const homeRoute = require('./home-routes');
 
-// const router = require('express').Router();
+router.use('/',homeRoute);
+router.use('/api', apiRoutes);
 
-// const homeRoutes = require('./home-routes.js');
+router.use((req, res) => {
+  res.send("<h1>Wrong Route!</h1>")
+});
 
-// router.use('/', homeRoutes);
-
-// module.exports = router;
+module.exports = router;

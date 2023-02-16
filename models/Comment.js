@@ -11,14 +11,6 @@ Comment.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    title: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    // post_date: {
-    //   type: DataTypes.DATE,
-    //   allowNull: false,
-    // },
     user_comment: {
       type: DataTypes.STRING,
       allowNull: false,
