@@ -29,20 +29,6 @@
         text-align: right;
     }
     
-    ul li {
-        display: inline-block;
-        margin:2px;
-        padding:10px;
-        border-left: 5px solid var(--pansy);
-        text-decoration: none;
-    }
-    
-    li {
-        text-align: center;
-        font-size: 1.25rem;
-        color: var(--textblack);
-    }
-    
     a {
         color: var(--textblack);
         text-decoration: none;
@@ -68,9 +54,10 @@
     
     /* Section - Avatar and About Me */
     
-    body {
+    .box {
         padding: 50px;
         background-color: var(--mainwhite);
+        border-color: #000500;
     }
     section {
         border: 5px solid var(--textblack);
@@ -82,97 +69,6 @@
     div {
         position: relative;
     }
-    #about-me {
-        position: absolute;
-        flex: 2 1 auto;
-        font-size: 2rem;
-        margin-top: 30px;
-        text-align: center;
-    }
-    
-    figure.avatar{
-        width:auto;
-        display: inline-flex;
-        margin-top: 20px;
-        margin-left: -20px;
-        align-items: center;
-    }
-    figure.avatar img {
-        max-width: 200px;
-        margin: 20px 30px 0 0;
-    }
-    .about-me-text {
-        flex: 1 1 auto;
-        text-decoration: none;
-        text-align: center;
-        padding-top: 50px;
-        padding-left: 25px;
-    
-    }
-    
-    /* Aside - with "My Works title" */
-    main {
-        display: inline-block;
-        border: 5px solid var(--textblack);
-        margin-top: 30px;
-    }
-    
-    article {
-        padding: 20px 40px 0 40px;
-        max-width: 50%;
-        float:left;
-    }
-    article img {
-        max-width: 200px;
-        margin: 20px 30px 0 0;
-    }
-    
-    #my-works {
-        position: absolute;
-        font-size: 2rem;
-        text-align: center;
-        margin-top:-10px;
-        margin-left: 13%;
-    }
-    
-    figure img.first-work{
-       max-width: 100%;
-       margin-top: 30px;
-       margin-bottom: 10px;
-    }
-    
-    figcaption {
-        margin-bottom: 15px;
-    }
-    
-    span {
-        font-weight: bold;
-    }
-    
-    .sample {
-        margin-top: 10px;
-        margin-bottom: -20px;
-        margin-right: 10px;
-    }
-    /* Main with placeholder images for other works */
-    
-    aside {
-        padding: 0 0 20px 30px;
-        margin-bottom: 10px;
-        max-width: 50%;
-        float: right;
-    }
-    
-    aside img {
-        max-width: 125px;
-        margin-top: 40px;
-    }
-    
-    aside div {
-        display: inline-flex;
-        justify-content: center;
-    }
-    
     
     /* Footer - Contact Me */
     

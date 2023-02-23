@@ -14,8 +14,8 @@ const postdata = [
     comment_id: 2,  
   }, 
   {
-    username: 'Placeholder 2',
-    post_date: 'Lorem Ipsum is Lorem Ipsum',
+    title: 'Placeholder 2',
+    content: 'Lorem Ipsum is Lorem Ipsum',
     user_id: 2,
     comment_id: 3,
   },
