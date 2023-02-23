@@ -8,9 +8,9 @@ const seedAll = async () => {
 
   await seedUser();
 
-  await seedComment();
-  
   await seedPostdata();
+
+  await seedComment();
 
   process.exit(0);
 };

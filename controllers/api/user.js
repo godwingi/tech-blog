@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../../models'); 
+const { User, Comment } = require('../../models'); 
 
 router.post('/', async (req, res) => {
     try {
@@ -10,4 +10,15 @@ router.post('/', async (req, res) => {
     }
   });
 
+  router.get('/', async (req, res) => {
+    try {
+      const userData = await User.findAll({
+        include: [Comment] 
+    });
+      res.status(200).json(userData);
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  });
   module.exports = router;

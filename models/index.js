@@ -7,16 +7,24 @@ Postdata.belongsTo(User, {
   foreignKey: 'user_id',
     });
 
+    User.hasMany(Postdata, {
+      foreignKey: 'user_id',
+    });
+
 Comment.belongsTo(User, {
   foreignKey: 'user_id',
 });
 
 Comment.belongsTo(Postdata, {
-  foreignKey: 'comment_id',
+  foreignKey: 'postdata_id',
 });
 
 Postdata.hasMany(Comment, {
-    foreignKey: 'comment_id',
+    foreignKey: 'postdata_id',
+  });
+
+  User.hasMany(Comment, {
+    foreignKey: 'user_id',
   });
   
 
