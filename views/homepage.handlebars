@@ -1,12 +1,14 @@
-{{!-- {{ #each postData as |post|}} --}}
+
 <div class="card">
+{{#each posts}}
   <div class="card-header">
-    {{ post.user_id }}
+   {{posts.user.username}}
   </div>
   <div class="card-body">
-    <h5 class="card-title"> {{ post.title }}</h5>
-    <p class="card-text"> {{ post.content }}</p>
+    <h5 class="card-title"> {{posts.title}}</h5>
+    <p class="card-text"> {{posts.content}}</p>
     <a href="#" class="btn btn-primary"> Make a Comment </a>
   </div>
+{{/each}}
 </div>
-{{!-- {{/each}} --}}
+<br> <br>
