@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Postdata, Comment } = require('../../models'); 
+const { Postdata, Comment, User } = require('../../models'); 
 
 // router.get('/', async (req, res) => {
 //   try {
@@ -14,6 +14,21 @@ const { Postdata, Comment } = require('../../models');
 //     res.status(500).json(err);
 // }
 // });
+
+router.get('/', async (req, res) => {
+  try {
+      const postData = await Postdata.findAll({
+        include: [Comment, User]
+      });
+      const posts = postData.map((post) => post.get({ plain: true }));
+      console.log('this is the console log of POSTS --------> ', posts);
+      res.render('dashboard', {
+                posts,
+              });
+            } catch (err) {
+              res.status(500).json(err);
+            }
+          }); 
 
 router.get('/', async (req, res) => {
     try {

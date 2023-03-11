@@ -1,4 +1,20 @@
 <div class="card">
+{{#each posts as |post|}}
+  <div class="card-header">
+   {{post.user.username}}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"> {{post.title}}</h5>
+    <p class="card-text"> {{post.content}}</p>
+  </div>
+  <a href="#" class="btn btn-primary" id="dashboard"> Comments Go Here... </a>
+{{/each}}
+</div>
+<br> <br>
+
+
+
+{{!-- <div class="card">
   <div class="card-header">
     Featured
   </div>
@@ -19,4 +35,4 @@
       <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
     </blockquote>
   </div>
-</div>
+</div> --}}
